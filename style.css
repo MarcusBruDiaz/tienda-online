@@ -1,0 +1,179 @@
+:root{
+    --white: #ffffff;
+    --black: #000;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #f7f7f7;
+    --hospital-green: #acd9b2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 32px;
+}
+
+
+*{
+    padding:0;
+  
+    margin: 0;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+.navbar-left ul,
+.navbar-right ul{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center ;
+
+
+}
+
+.navbar-left{
+    display: flex;
+  
+}
+
+.navbar-right{
+    display: flex;
+    padding: 20px;
+}
+
+
+
+.navbar-left ul{
+   margin-left: 12px;
+}
+
+
+.navbar-left ul li a,
+.navbar-right ul li a{
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border:  1px solid var(--white);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover{
+    color: var(--hospital-green);
+    border:  1px solid var(--hospital-green);
+}
+
+
+
+.navbar-right-shopping div{
+    width: 8px;
+    height: 15px;
+    background-color: var(--hospital-green);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -3px;
+}
+
+.navbar-right-shopping{
+    position: relative;
+    margin-left: 20px;
+}
+
+
+.menu{
+    display: none;
+}
+
+.logo{
+    width: 100px;
+}
+
+.navbar-right-email{
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    cursor: pointer;
+}
+
+.navbar-logo{
+    padding-left: 20px;
+}
+
+.desktop-menu{
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--white);
+    width: 120px;
+    height: auto;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 6px;
+
+}
+
+.desktop-menu ul{
+    list-style: none;
+}
+
+
+
+.desktop-menu ul li{
+    margin-bottom: 10px;
+    text-align: end;
+    text-decoration: none;
+    padding: 10px 10px 0 10px;
+
+}
+
+
+.inactive{
+    display: none;
+}
+
+
+
+ul li:last-child{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 0px solid var(--very-light-pink);
+}
+
+
+ul li:last-child a{
+    color: var(--hospital-green);
+    font-size: var(--sm);
+}
+
+
+ul li a{
+    color: var(--black);
+    text-decoration: none;
+    font-weight: bold;
+ }
+
+@media (max-width:640px){
+
+
+    .menu{
+        display: block;
+        padding: 20px;
+    }
+    .navbar-left ul{
+        display: none;
+    }
+
+    .navbar-right-email{
+        display: none;
+    }
+
+    
+}
