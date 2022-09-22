@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="estiles.css">-->
+    <title>Mobile menu</title>
+    <style>
+        :root{
+            --white: #ffffff;
+            --black: #000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd9b2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 32px;
+        }
+
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            font-family: 'Quicksand', sans-serif;
+        }
+
+
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+
+            
+        }
+
+
+        .boton{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-signup{
+            width: 100%;
+            background-color: var(--white);
+            border: 1px solid var(--hospital-green);
+            border-radius: 4px;
+            color: var(--hospital-green);
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+
+
+        .mobile-menu{
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+            justify-content: space-between;
+        }
+
+
+        .mobile-menu ul li{
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .mobile-menu  ul:nth-child(1){
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+
+        .mobile-menu  ul:nth-child(2){
+            margin: 80px 0 50px 0;
+        }
+
+
+        .mobile-menu  ul:last-child .email{
+            font-size: var(--sm);
+            font-weight: 300;
+        }
+
+        .mobile-menu  ul:last-child .sign-out{
+            color: var(--hospital-green);
+            font-size: var(--sm);
+        }
+
+
+        .mobile-menu  ul li a{
+            text-decoration: none;
+            color: var(--black);
+            font-weight: bold;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="mobile-menu">
+        
+        <ul>
+            <li>
+                <a href="/">CATEGORIES</a>
+            </li>
+            <li>
+                <a href="/">All</a>
+            </li>
+            <li>
+                <a href="/">Clothes</a>
+            </li>
+            <li>
+                <a href="/">Electronics</a>
+            </li>
+            <li>
+                <a href="/">Toys</a>
+            </li>
+            <li>
+                <a href="/">Other</a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="/">My orders</a>
+            </li>
+            <li>
+                <a href="/">My account</a>
+            </li>
+        </ul>
+        
+
+        <ul>
+            <li>
+                <a href="/" class="email">marcos.bru@udea.edu.co</a>
+            </li>
+            <li>
+                <a href="/" class="sign-out">Sign out</a>
+            </li>
+        </ul>
+
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+
+        :root{
+            --white: #ffffff;
+            --black: #000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd9b2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 32px;
+        }
+
+
+        *{
+            padding:0;
+          
+            margin: 0;
+        }
+
+        body{
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .navbar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+
+        .navbar-left ul,
+        .navbar-right ul{
+            list-style: none;
+            text-decoration: none;
+            display: flex;
+            align-items: center ;
+
+        
+        }
+
+        .navbar-left{
+            display: flex;
+          
+        }
+
+        .navbar-right{
+            display: flex;
+            padding: 20px;
+        }
+
+
+
+        .navbar-left ul{
+           margin-left: 12px;
+        }
+
+
+        .navbar-left ul li a,
+        .navbar-right ul li a{
+            text-decoration: none;
+            color: var(--very-light-pink);
+            border:  1px solid var(--white);
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .navbar-left ul li a:hover,
+        .navbar-right ul li a:hover{
+            color: var(--hospital-green);
+            border:  1px solid var(--hospital-green);
+        }
+
+
+
+        .navbar-right-shopping div{
+            width: 8px;
+            height: 15px;
+            background-color: var(--hospital-green);
+            border-radius: 50%;
+            font-size: var(--sm);
+            font-weight: bold;
+            position: absolute;
+            top: -6px;
+            right: -3px;
+        }
+        
+        .navbar-right-shopping{
+            position: relative;
+            margin-left: 20px;
+        }
+   
+
+        .menu{
+            display: none;
+        }
+        
+        .logo{
+            width: 100px;
+        }
+
+        .navbar-right-email{
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+        }
+
+        .navbar-logo{
+            padding-left: 20px;
+        }
+
+        @media (max-width:640px){
+
+
+            .menu{
+                display: block;
+                padding: 20px;
+            }
+            .navbar-left ul{
+                display: none;
+            }
+
+            .navbar-right-email{
+                display: none;
+            }
+
+            
+        }
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+      
+        <img src="/images/icons/icon_menu.svg" alt="menu" class="menu">
+
+        <div class="navbar-logo">
+            <img src="/images/logos/logo_yard_sale.svg" alt="logo" class="logo">
+        </div>
+       
+
+        <div class="navbar-left">
+           
+            <ul>
+                <li>
+                    <a href="/">All</a>
+                </li>
+                <li>
+                    <a href="/">Clothes</a>
+                </li>
+                <li>
+                    <a href="/">Electronics</a>
+                </li>
+                <li>
+                    <a href="/">Furnitures</a>
+                </li>
+                <li>
+                    <a href="/">Toys</a>
+                </li>
+                <li>
+                    <a href="/">Others</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar-right-email">maros.bru@udea.edu.co</li>
+                <li class="navbar-right-shopping">
+                    <img src="/images/icons/icon_shopping_cart.svg" alt="shopping cart">
+                    <div>2</div>
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
+
+
+</body>
+</html>

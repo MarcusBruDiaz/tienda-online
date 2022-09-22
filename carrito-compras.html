@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Carrito compras</title>
+    
+    <style>
+           :root{
+            --white: #ffffff;
+            --black: #000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd9b2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 32px;
+        }
+
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+
+
+
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+
+            
+        }
+        body{
+        
+            font-family: 'Quicksand', sans-serif;
+        }
+
+
+
+        .product-detail{
+            width: 360px;
+            padding-bottom: 24px;
+            position: relative;
+        }
+
+        .order-container-tittle{
+            font-size: var(--lg);
+            font-family: 'Quicksand', sans-serif;
+            margin-left: 10px;
+        }
+
+        .product-detail-info-button{
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .order-container-product{
+            display: flex;
+            align-items: center;
+            width: 300px;
+        }
+
+
+        .order-container-product img:nth-child(1){
+                width: 100px;
+                height: 100px;
+                border-radius: 20px ;
+                object-fit: cover;
+              
+        }
+
+
+
+        .order-container-product  p:nth-child(3){
+            font-weight: bold;
+            margin-right: 10px;
+            
+        }
+       
+
+        .order-container-product  p:nth-child(2){
+            color: var(--very-light-pink);
+            margin-right: 100px;
+            margin-left: 20px;
+
+        }
+       
+       
+        .order-container-content{
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--text-input-field);
+            border-radius: 10px;
+            width: 300px;
+            margin-bottom: 20px;
+            padding:  10px 24px 10px 24px;
+        }
+
+
+        /*.order-container-content p:nth-child(1){
+            padding-top: 10px;
+        }*/
+
+
+        .order-container-content p span:nth-child(1){
+            font-size: var(--md);
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .order-container-content p span:nth-child(3){
+            font-size: var(--sm);
+            color: var(--very-light-pink);  
+        }
+
+
+        .form-signup{
+            width: 100%;
+            background-color: var(--hospital-green);
+            border: 1px solid var(--hospital-green);
+            border-radius: 4px;
+            color: var(--white);
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+
+        .product-detail-tittle{
+            display: flex;
+        }
+        
+        .product-detail-tittle img{
+            transform: rotate(180deg);
+        }
+
+
+
+        @media (max-width:640px){
+            .product-detail{
+                width: 100%;
+            }
+        }
+
+    </style>
+    
+</head>
+<body>
+
+    <main>
+        <aside class="product-detail">
+
+            <div class="product-detail-tittle">
+                <img src="./images/icons/flechita.svg" alt="arrow">
+                <p class="order-container-tittle">My order</p>
+            </div>
+           
+
+
+            <div class="order-container-product">
+                <div class="order-container-product-img">
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <p class="order-container-product-nombre">Bike</p>
+                <p>$120,00</p> 
+               
+                <img src="./images/icons/icon_close.png" alt="">
+            </div>
+
+
+            <div class="order-container-product">
+                <div class="order-container-product-img">
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <p class="order-container-product-nombre">Bike</p>
+                <p>$120,00</p> 
+               
+                <img src="./images/icons/icon_close.png" alt="">
+            </div>
+
+            <div class="order-container-product">
+                <div class="order-container-product-img">
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <p class="order-container-product-nombre">Bike</p>
+                <p>$120,00</p> 
+               
+                <img src="./images/icons/icon_close.png" alt="">
+            </div>
+
+
+            <div class="order-container-content">
+                <p>
+                    <span>Total:</span>
+                </p>
+                <p>$560.00</p>
+            </div>
+
+            <div class="boton">
+                <button class="form-signup">Checkout</button>
+            </div>
+    
+
+
+
+        </aside>
+    </main>
+   
+    
+</body>
+</html>
