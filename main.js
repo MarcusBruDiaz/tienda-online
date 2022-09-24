@@ -9,29 +9,49 @@ const carroCompras = document.querySelector('.navbar-right-shopping');
 const menuCompras = document.querySelector('.product-detail');
 
 
+const detailProductOpen= document.querySelector('.shopping');
+
+const closeDetailproduct = document.querySelector('.product-detail-close');
+
+
 const cardsContainer = document.querySelector('.main-container-cards');
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
 carroCompras.addEventListener('click', toggleCarritoMenu);
-
+closeDetailproduct.addEventListener('click',closeDetail)
 
 function toggleDesktopMenu(){
     desktopMenu.classList.toggle('inactive');
     menuCompras.classList.add('inactive')
-
+    detailProductOpen.classList.add('inactive');
+  
 }
 
 function toggleMobileMenu(){
     mobileMenu.classList.toggle('inactive');
     menuCompras.classList.add('inactive')
+    detailProductOpen.classList.add('inactive');
 }
 
 
 function toggleCarritoMenu(){
     menuCompras.classList.toggle('inactive');
     mobileMenu.classList.add('inactive');
+    detailProductOpen.classList.add('inactive');
 }
+
+
+function openDetailProduct(){
+    detailProductOpen.classList.remove('inactive');
+    menuCompras.classList.add('inactive');
+    desktopMenu.classList.add('inactive');
+}
+
+function closeDetail(){
+    detailProductOpen.classList.add('inactive');
+}
+
 
 
 
@@ -83,6 +103,8 @@ function renderProducts(arr){
         // product = {name,precio,imagen}--> product.imagen
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.imagen);
+        productImg.addEventListener('click',openDetailProduct);
+
     
     
         const productInfo= document.createElement('div');
